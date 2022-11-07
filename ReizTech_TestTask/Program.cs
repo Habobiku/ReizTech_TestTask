@@ -8,10 +8,8 @@ namespace ReizTech_TestTask
         static void Main(string[] args)
         {
             Task1.Start();
-
             Console.ReadKey();
-          
-       
+
             Task2.Start();
             Console.ReadKey();
 
