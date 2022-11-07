@@ -5,6 +5,7 @@ namespace ReizTech_TestTask
     {
       public IList<Branch> Branches { get;  private set; }
       public string Name { get; private set; }
+
         public Branch(String name)
         {
             Name = name;
@@ -34,18 +35,7 @@ namespace ReizTech_TestTask
             return path;
         }
 
-        public Branch FindBranch(string name)
-        {
-            foreach (Branch branch in Branches)
-            {
-                if (branch.Name != name)
-                    branch.FindBranch(name);
-                                                 
-                return branch;
-            }
-
-            return null;
-        }
+       
     }
 }
 
