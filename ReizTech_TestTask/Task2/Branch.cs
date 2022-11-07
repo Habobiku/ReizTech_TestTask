@@ -3,8 +3,8 @@ namespace ReizTech_TestTask
 {
     public class Branch
     {
-      public IList<Branch> Branches { get;  private set; }
-      public string Name { get; private set; }
+        public IList<Branch> Branches { get; private set; }
+        public string Name { get; private set; }
 
         public Branch(String name)
         {
@@ -16,7 +16,6 @@ namespace ReizTech_TestTask
         {
             Branches.Add(branch);
             return branch;
-
         }
 
         public List<Branch> FindDepth()
@@ -27,15 +26,12 @@ namespace ReizTech_TestTask
             foreach (Branch branch in Branches)
             {
                 List<Branch> temp = branch.FindDepth();
-                     if (temp.Count > path.Count)
+                if (temp.Count > path.Count)
                     path = temp;
             }
-            
             path.Insert(0, this);
             return path;
         }
-
-       
     }
 }
 
